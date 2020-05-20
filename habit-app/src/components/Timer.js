@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+//adapted/updated from SitePoint on Youtube
+
 class Timer extends Component {
 
   constructor(props) {
