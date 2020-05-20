@@ -4,16 +4,15 @@ import './calendar.css';
 
 class Calendar extends Component {
 
-  state = {
-    dateContext: moment(),
-    today: moment(),
-    showMonthPopup: false,
-    showYearPopup: false,
-  }
+  
   constructor(props) {
     super(props);
-    this.width = props.width || "400px";
-    this.style = props.style || {};
+    this.state = {
+      dateContext: moment(),
+      today: moment(),
+      showMonthPopup: false,
+      showYearPopup: false,
+    }
   }
 
   
