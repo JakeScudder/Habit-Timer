@@ -1,10 +1,8 @@
-import React, {Component} from 'react';
-import moment from 'moment';
-import './calendar.css';
+import React, { Component } from "react";
+import moment from "moment";
+import "./calendar.css";
 
 class Calendar extends Component {
-
-  
   constructor(props) {
     super(props);
     this.state = {
@@ -12,10 +10,8 @@ class Calendar extends Component {
       today: moment(),
       showMonthPopup: false,
       showYearPopup: false,
-    }
+    };
   }
-
-  
 
   weekdays = moment.weekdays(); //Sunday, Monday, etc.
   weekdaysShort = moment.weekdaysShort(); // Sun, Mon, Tue, etc.
@@ -23,42 +19,58 @@ class Calendar extends Component {
 
   year = () => {
     return this.state.dateContext.format("Y");
-  }
+  };
   month = () => {
     return this.state.dateContext.format("MMMM");
-  }
+  };
   daysInMonth = () => {
     return this.state.dateContext.daysInMonth();
-  }
+  };
   currentDate = () => {
     return this.state.dateContext.get("date");
-  }
+  };
   currentDay = () => {
     return this.state.dateContext.format("D");
-  }
+  };
 
   firstDayOfMonth = () => {
     let dateContext = this.state.dateContext;
-    let firstDay = moment(dateContext).startOf("month").format("d")
+    let firstDay = moment(dateContext).startOf("month").format("d");
     return firstDay;
-  }
+  };
 
   render() {
     // Map the weekday Sun, Mon, Tues
     let weekdays = this.weekdaysShort.map((day) => {
       return (
-        <td key={day} className="week-day">{day}</td>
-      )
-    })
+        <td key={day} className="week-day">
+          {day}
+        </td>
+      );
+    });
 
     let blanks = [];
     for (let i = 0; i < this.firstDayOfMonth(); i++) {
-      blanks.push(<td key={i * 10} className="empty">{""}</td>);
+      blanks.push(
+        <td key={i * 10} className="empty">
+          {""}
+        </td>
+      );
     }
-    
+
     let daysInMonth = [];
     for (let d = 1; d <= this.daysInMonth(); d++) {
-      let className = (d === this.currentDay() ? "day current-day": "day");
+      console.log(d);
+      console.log(this.currentDay());
+      let className = d == this.currentDay() ? "day current-day" : "day";
+      console.log(
+        "d=",
+        d,
+        "current day=",
+        this.currentDay(),
+        "className=",
+        className
+      );
       daysInMonth.push(
         <td key={d} className={className}>
           <span>{d}</span>
@@ -66,12 +78,12 @@ class Calendar extends Component {
       );
     }
 
-    let totalDays = [ ...blanks, ...daysInMonth];
+    let totalDays = [...blanks, ...daysInMonth];
     let rows = [];
     let cells = [];
 
     totalDays.forEach((row, i) => {
-      if(i % 7 !== 0) {
+      if (i % 7 !== 0) {
         cells.push(row);
       } else {
         let insertRow = cells.slice();
@@ -79,37 +91,30 @@ class Calendar extends Component {
         cells = [];
         cells.push(row);
       }
-      if (i === totalDays.length -1) {
+      if (i === totalDays.length - 1) {
         let insertRow = cells.slice();
         rows.push(insertRow);
       }
-    })
-
-    let trElements = rows.map((d, index) => {
-      return (
-        <tr key={index}>
-          {d}
-        </tr>
-      );
     });
 
-    return(
+    let trElements = rows.map((d, index) => {
+      return <tr key={index}>{d}</tr>;
+    });
+
+    return (
       <div className="calendar-container">
         <table className="calendar">
           <thead>
-            <tr className="calendar-head">
-            </tr>
+            <tr className="calendar-head"></tr>
           </thead>
           <tbody>
-            <tr>
-              {weekdays}
-            </tr>
+            <tr>{weekdays}</tr>
             {trElements}
           </tbody>
         </table>
       </div>
-    )
-  } 
+    );
+  }
 }
 
 export default Calendar;

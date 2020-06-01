@@ -1,16 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 //Components
 
-import Timer from './components/Timer';
-import Calendar from './components/Calendar/Calendar';
+import Timer from "./components/Timer";
+import Calendar from "./components/Calendar/Calendar";
 
 const style = {
   position: "relative",
-  margin: "50px auto"
-}
+  margin: "50px auto",
+};
 
 function App() {
   return (
@@ -18,10 +18,10 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div id="calendar-container">
-          <Calendar style={style} width="400px"/>
+          <Calendar style={style} width="400px" />
         </div>
-        <h1>
-          Shower Timer
+        <h1 id="app-title">
+          Shower <span className="span-color">Timer</span>
         </h1>
         <div id="timer-container">
           <Timer />
