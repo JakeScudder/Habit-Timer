@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWater } from "@fortawesome/free-solid-svg-icons";
 
 //adapted/updated from SitePoint on Youtube
 
@@ -6,12 +8,13 @@ class Timer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      seconds: 0,
+      seconds: 300,
       start: false,
     };
     this.handleStart = this.handleStart.bind(this);
     this.handleStop = this.handleStop.bind(this);
     this.handleReset = this.handleReset.bind(this);
+    this.handleSave = this.handleSave.bind(this);
   }
 
   componentDidMount() {
@@ -57,17 +60,43 @@ class Timer extends Component {
   handleStop() {
     clearInterval(this.incrementer);
     let resetButton = document.querySelector("#reset");
+    let saveButton = document.querySelector("#save");
     resetButton.style.display = "";
+    saveButton.style.display = "";
     this.toggle();
   }
 
   handleReset() {
     let resetButton = document.querySelector("#reset");
+    let saveButton = document.querySelector("#save");
+
     resetButton.style.display = "none";
+    saveButton.style.display = "none";
+
     this.setState({
       seconds: 0,
       start: false,
     });
+  }
+
+  currentDay = () => {
+    return this.state.dateContext.format("D");
+  };
+
+  handleSave() {
+    let currentDayElem = document.querySelector(".day.current-day");
+    currentDayElem.removeChild(currentDayElem.firstChild);
+    this.handleReset();
+
+    if (this.state.seconds <= 300) {
+      currentDayElem.className = "excellent";
+    } else if (this.state.seconds <= 420) {
+      currentDayElem.className = "great";
+    } else if (this.state.seconds <= 600) {
+      currentDayElem.className = "good";
+    } else {
+      currentDayElem.className = "needs-work";
+    }
   }
 
   render() {
@@ -94,6 +123,14 @@ class Timer extends Component {
           onClick={this.handleReset}
         >
           <h2>Reset</h2>
+        </button>
+        <button
+          id="save"
+          style={{ display: "none" }}
+          type="button"
+          onClick={this.handleSave}
+        >
+          <h2>Save Data</h2>
         </button>
       </div>
     );

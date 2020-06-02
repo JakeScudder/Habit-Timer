@@ -8,7 +8,7 @@ body {
 }
 
 .span-color {
-  color: #60dafb;
+  color: #22aef5;
 }
 
 code {
@@ -25,6 +25,7 @@ code {
 }
 
 #app-title {
+  margin-top: 20px;
   margin-bottom: 0px;
 }
 
@@ -34,7 +35,10 @@ code {
 
 /* Buttons */
 
-#start {
+#save {
+  display: block;
+  width: 240px;
+  height: 120px;
 }
 
 #reset {
@@ -57,10 +61,12 @@ div button {
   font-size: 25px;
   font-weight: 500;
   margin-bottom: 25px;
-  background-color: #34a5f5;
+  background-color: #22aef5;
   border: 4px solid #427198;
   border-radius: 10%;
 }
+
+/**** Calendar *****/
 
 #calendar p {
   display: inline-block;
@@ -69,6 +75,59 @@ div button {
   padding: 10px;
 }
 
+.calendar {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .day.current-day {
-  color: #60dafb;
+  color: #22aef5;
+}
+
+#legend-container {
+  display: inline-block;
+}
+
+.legend-color {
+  display: inline-block;
+  height: 40px;
+  width: 80px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.legend-color p {
+  margin-top: 10px;
+}
+
+.legend-color.one {
+  background-color: #22aef5;
+}
+
+.legend-color.two {
+  background-color: #43af35;
+}
+
+.legend-color.three {
+  background-color: #d1d41f;
+}
+
+.legend-color.four {
+  background-color: #d48b1f;
+}
+
+.excellent {
+  background-color: #22aef5;
+}
+
+.great {
+  background-color: #43af35;
+}
+
+.good {
+  background-color: #d1d41f;
+}
+
+.needs-work {
+  background-color: #d48b1f;
 }

@@ -60,20 +60,11 @@ class Calendar extends Component {
 
     let daysInMonth = [];
     for (let d = 1; d <= this.daysInMonth(); d++) {
-      console.log(d);
-      console.log(this.currentDay());
-      let className = d == this.currentDay() ? "day current-day" : "day";
-      console.log(
-        "d=",
-        d,
-        "current day=",
-        this.currentDay(),
-        "className=",
-        className
-      );
+      let className = d == this.currentDay() ? "day current-day" : `day ${d}`;
+      let spanName = d == this.currentDay() ? `day current-span` : d;
       daysInMonth.push(
         <td key={d} className={className}>
-          <span>{d}</span>
+          <span id={spanName}>{d}</span>
         </td>
       );
     }
@@ -112,6 +103,20 @@ class Calendar extends Component {
             {trElements}
           </tbody>
         </table>
+        <div id="legend-container">
+          <div class="legend-color one">
+            <p id="excellent"> &lt; 5 min </p>
+          </div>
+          <div class="legend-color two">
+            <p id="great"> &lt; 7 min </p>
+          </div>
+          <div class="legend-color three">
+            <p id="good"> &lt; 10 min </p>
+          </div>
+          <div class="legend-color four">
+            <p id="needs-work"> &gt; 10 min </p>
+          </div>
+        </div>
       </div>
     );
   }
