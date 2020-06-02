@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWater } from "@fortawesome/free-solid-svg-icons";
 
 //adapted/updated from SitePoint on Youtube
+
+//I need something that takes the className puts it in the App.js state, which updates the Calendar state as well.
 
 class Timer extends Component {
   constructor(props) {

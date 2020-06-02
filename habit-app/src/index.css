@@ -80,6 +80,11 @@ div button {
   margin-right: auto;
 }
 
+.calendar-container {
+  position: relative;
+  margin: 50px auto;
+}
+
 .day.current-day {
   color: #22aef5;
 }

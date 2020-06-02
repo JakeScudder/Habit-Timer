@@ -60,8 +60,20 @@ class Calendar extends Component {
 
     let daysInMonth = [];
     for (let d = 1; d <= this.daysInMonth(); d++) {
-      let className = d == this.currentDay() ? "day current-day" : `day ${d}`;
-      let spanName = d == this.currentDay() ? `day current-span` : d;
+      let className =
+        d === parseInt(this.currentDay()) ? "day current-day" : `day ${d}`;
+      let spanName = d === parseInt(this.currentDay()) ? `day current-span` : d;
+
+      //Under Construction
+
+      // if (props.state.{d} === "great" || props.state.{d} = "excellent || props.state.{d} === "good" || props.state.{d} === "needs-work") {
+      //  daysInMonth.push(
+      // <td key={d} >
+      //   <span id={spanName}>{d}</span>
+      // </td>
+      // );
+      // }
+
       daysInMonth.push(
         <td key={d} className={className}>
           <span id={spanName}>{d}</span>
@@ -104,16 +116,16 @@ class Calendar extends Component {
           </tbody>
         </table>
         <div id="legend-container">
-          <div class="legend-color one">
+          <div className="legend-color one">
             <p id="excellent"> &lt; 5 min </p>
           </div>
-          <div class="legend-color two">
+          <div className="legend-color two">
             <p id="great"> &lt; 7 min </p>
           </div>
-          <div class="legend-color three">
+          <div className="legend-color three">
             <p id="good"> &lt; 10 min </p>
           </div>
-          <div class="legend-color four">
+          <div className="legend-color four">
             <p id="needs-work"> &gt; 10 min </p>
           </div>
         </div>
