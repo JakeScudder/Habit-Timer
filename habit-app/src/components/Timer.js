@@ -85,13 +85,17 @@ class Timer extends Component {
 
   handleSave() {
     let currentDayElem = document.querySelector(".day.current-day");
-    currentDayElem.removeChild(currentDayElem.firstChild);
+    let index = currentDayElem.firstChild.innerHTML;
+    console.log(currentDayElem);
+    // currentDayElem.removeChild(currentDayElem.firstChild);
     this.handleReset();
 
     if (this.state.seconds <= 300) {
       currentDayElem.className = "excellent";
+      this.props.setClass();
     } else if (this.state.seconds <= 420) {
       currentDayElem.className = "great";
+      this.props.setClass("great", index);
     } else if (this.state.seconds <= 600) {
       currentDayElem.className = "good";
     } else {

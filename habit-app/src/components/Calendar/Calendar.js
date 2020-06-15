@@ -64,21 +64,20 @@ class Calendar extends Component {
         d === parseInt(this.currentDay()) ? "day current-day" : `day ${d}`;
       let spanName = d === parseInt(this.currentDay()) ? `day current-span` : d;
 
-      //Under Construction
-
-      // if (props.state.{d} === "great" || props.state.{d} = "excellent || props.state.{d} === "good" || props.state.{d} === "needs-work") {
-      //  daysInMonth.push(
-      // <td key={d} >
-      //   <span id={spanName}>{d}</span>
-      // </td>
-      // );
-      // }
-
-      daysInMonth.push(
-        <td key={d} className={className}>
-          <span id={spanName}>{d}</span>
-        </td>
-      );
+      if (this.props.data[d] !== null) {
+        console.log("found cookie");
+        daysInMonth.push(
+          <td key={d} className={this.props.data[d]}>
+            <span id={spanName}>{d}</span>
+          </td>
+        );
+      } else {
+        daysInMonth.push(
+          <td key={d} className={className}>
+            <span id={spanName}>{d}</span>
+          </td>
+        );
+      }
     }
 
     let totalDays = [...blanks, ...daysInMonth];
