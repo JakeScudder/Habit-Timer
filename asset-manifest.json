@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Habit-Timer/static/css/main.c9d91f08.chunk.css",
-    "main.js": "/Habit-Timer/static/js/main.85bcbfa6.chunk.js",
-    "main.js.map": "/Habit-Timer/static/js/main.85bcbfa6.chunk.js.map",
+    "main.js": "/Habit-Timer/static/js/main.64ca8cb4.chunk.js",
+    "main.js.map": "/Habit-Timer/static/js/main.64ca8cb4.chunk.js.map",
     "runtime-main.js": "/Habit-Timer/static/js/runtime-main.04cd5a3c.js",
     "runtime-main.js.map": "/Habit-Timer/static/js/runtime-main.04cd5a3c.js.map",
     "static/js/2.813c571f.chunk.js": "/Habit-Timer/static/js/2.813c571f.chunk.js",
     "static/js/2.813c571f.chunk.js.map": "/Habit-Timer/static/js/2.813c571f.chunk.js.map",
     "index.html": "/Habit-Timer/index.html",
-    "precache-manifest.715c42ef288991996e262bba078d1508.js": "/Habit-Timer/precache-manifest.715c42ef288991996e262bba078d1508.js",
+    "precache-manifest.eb7fbd1f8cf4ac5bf5a242b14caf6835.js": "/Habit-Timer/precache-manifest.eb7fbd1f8cf4ac5bf5a242b14caf6835.js",
     "service-worker.js": "/Habit-Timer/service-worker.js",
     "static/css/main.c9d91f08.chunk.css.map": "/Habit-Timer/static/css/main.c9d91f08.chunk.css.map",
     "static/js/2.813c571f.chunk.js.LICENSE.txt": "/Habit-Timer/static/js/2.813c571f.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.04cd5a3c.js",
     "static/js/2.813c571f.chunk.js",
     "static/css/main.c9d91f08.chunk.css",
-    "static/js/main.85bcbfa6.chunk.js"
+    "static/js/main.64ca8cb4.chunk.js"
   ]
 }
