@@ -8,7 +8,7 @@ class Timer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      seconds: 300,
+      seconds: 0,
       start: false,
     };
     this.handleStart = this.handleStart.bind(this);
@@ -86,20 +86,22 @@ class Timer extends Component {
   handleSave() {
     let currentDayElem = document.querySelector(".day.current-day");
     let index = currentDayElem.firstChild.innerHTML;
-    console.log(currentDayElem);
+    console.log("index", index);
     // currentDayElem.removeChild(currentDayElem.firstChild);
     this.handleReset();
 
-    if (this.state.seconds <= 300) {
+    if (this.state.seconds <= 360) {
       currentDayElem.className = "excellent";
-      this.props.setClass();
-    } else if (this.state.seconds <= 420) {
+      this.props.setClass("excellent", index);
+    } else if (this.state.seconds <= 480) {
       currentDayElem.className = "great";
       this.props.setClass("great", index);
     } else if (this.state.seconds <= 600) {
       currentDayElem.className = "good";
+      this.props.setClass("good", index);
     } else {
       currentDayElem.className = "needs-work";
+      this.props.setClass("needs-work", index);
     }
   }
 

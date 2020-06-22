@@ -49,10 +49,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log(Cookies.get("index15"));
+    console.log(Cookies.getJSON("index22"));
   }
 
   handleState = (className, index) => {
+    console.log(index);
     this.setState({
       [index]: className,
     });

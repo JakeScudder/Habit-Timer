@@ -10,6 +10,7 @@ class Calendar extends Component {
       today: moment(),
       showMonthPopup: false,
       showYearPopup: false,
+      monthName: "",
     };
   }
 
@@ -38,6 +39,35 @@ class Calendar extends Component {
     let firstDay = moment(dateContext).startOf("month").format("d");
     return firstDay;
   };
+
+  monthName = () => {
+    let date = new Date();
+    var d = moment(date);
+    let month = d.month();
+    let months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    let whatMonth = months[month];
+    this.setState({
+      monthName: whatMonth,
+    });
+  };
+
+  componentDidMount() {
+    this.monthName();
+  }
 
   render() {
     // Map the weekday Sun, Mon, Tues
@@ -105,6 +135,7 @@ class Calendar extends Component {
 
     return (
       <div className="calendar-container">
+        <h2 className="month-name">{this.state.monthName}</h2>
         <table className="calendar">
           <thead>
             <tr className="calendar-head"></tr>
@@ -116,10 +147,10 @@ class Calendar extends Component {
         </table>
         <div id="legend-container">
           <div className="legend-color one">
-            <p id="excellent"> &lt; 5 min </p>
+            <p id="excellent"> &lt; 6 min </p>
           </div>
           <div className="legend-color two">
-            <p id="great"> &lt; 7 min </p>
+            <p id="great"> &lt; 8 min </p>
           </div>
           <div className="legend-color three">
             <p id="good"> &lt; 10 min </p>

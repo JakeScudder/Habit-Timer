@@ -82,7 +82,7 @@ div button {
 
 .calendar-container {
   position: relative;
-  margin: 50px auto;
+  margin-top: 10px auto 10px auto;
 }
 
 .day.current-day {
@@ -96,8 +96,7 @@ div button {
 .legend-color {
   display: inline-block;
   height: 40px;
-  width: 80px;
-  padding: 10px;
+  padding: 2.5px;
   font-size: 18px;
 }
 
