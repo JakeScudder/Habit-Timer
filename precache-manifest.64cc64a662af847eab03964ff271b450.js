@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7a1f83acb9671ce971ac82c295c5fc97",
+    "revision": "cd7b96f4426dad8fc30706260f785e9b",
     "url": "/Habit-Timer/index.html"
   },
   {
-    "revision": "ed975f2d24b1ceacc094",
-    "url": "/Habit-Timer/static/css/main.c9d91f08.chunk.css"
+    "revision": "27727aff4159e02877d2",
+    "url": "/Habit-Timer/static/css/main.21b297a0.chunk.css"
   },
   {
-    "revision": "c92c8503b0f7c583f878",
-    "url": "/Habit-Timer/static/js/2.813c571f.chunk.js"
+    "revision": "7103ca85f9db34b45b34",
+    "url": "/Habit-Timer/static/js/2.8cb87dea.chunk.js"
   },
   {
     "revision": "99740f07e59da1777ca51e4cdac8fee9",
-    "url": "/Habit-Timer/static/js/2.813c571f.chunk.js.LICENSE.txt"
+    "url": "/Habit-Timer/static/js/2.8cb87dea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ed975f2d24b1ceacc094",
-    "url": "/Habit-Timer/static/js/main.64ca8cb4.chunk.js"
+    "revision": "27727aff4159e02877d2",
+    "url": "/Habit-Timer/static/js/main.626dea11.chunk.js"
   },
   {
     "revision": "e8f333d2cfa1b947506a",
