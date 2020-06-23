@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cd7b96f4426dad8fc30706260f785e9b",
+    "revision": "af10ce064c718febcb11f69b39893481",
     "url": "/Habit-Timer/index.html"
   },
   {
-    "revision": "27727aff4159e02877d2",
-    "url": "/Habit-Timer/static/css/main.21b297a0.chunk.css"
+    "revision": "88ce61c4137698f3583f",
+    "url": "/Habit-Timer/static/css/main.93b956e3.chunk.css"
   },
   {
     "revision": "7103ca85f9db34b45b34",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Habit-Timer/static/js/2.8cb87dea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "27727aff4159e02877d2",
-    "url": "/Habit-Timer/static/js/main.626dea11.chunk.js"
+    "revision": "88ce61c4137698f3583f",
+    "url": "/Habit-Timer/static/js/main.516dffe1.chunk.js"
   },
   {
     "revision": "e8f333d2cfa1b947506a",

@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Habit-Timer/static/css/main.21b297a0.chunk.css",
-    "main.js": "/Habit-Timer/static/js/main.626dea11.chunk.js",
-    "main.js.map": "/Habit-Timer/static/js/main.626dea11.chunk.js.map",
+    "main.css": "/Habit-Timer/static/css/main.93b956e3.chunk.css",
+    "main.js": "/Habit-Timer/static/js/main.516dffe1.chunk.js",
+    "main.js.map": "/Habit-Timer/static/js/main.516dffe1.chunk.js.map",
     "runtime-main.js": "/Habit-Timer/static/js/runtime-main.04cd5a3c.js",
     "runtime-main.js.map": "/Habit-Timer/static/js/runtime-main.04cd5a3c.js.map",
     "static/js/2.8cb87dea.chunk.js": "/Habit-Timer/static/js/2.8cb87dea.chunk.js",
     "static/js/2.8cb87dea.chunk.js.map": "/Habit-Timer/static/js/2.8cb87dea.chunk.js.map",
     "index.html": "/Habit-Timer/index.html",
-    "precache-manifest.64cc64a662af847eab03964ff271b450.js": "/Habit-Timer/precache-manifest.64cc64a662af847eab03964ff271b450.js",
+    "precache-manifest.2d436dd620164d81d7db85129ecb0974.js": "/Habit-Timer/precache-manifest.2d436dd620164d81d7db85129ecb0974.js",
     "service-worker.js": "/Habit-Timer/service-worker.js",
-    "static/css/main.21b297a0.chunk.css.map": "/Habit-Timer/static/css/main.21b297a0.chunk.css.map",
+    "static/css/main.93b956e3.chunk.css.map": "/Habit-Timer/static/css/main.93b956e3.chunk.css.map",
     "static/js/2.8cb87dea.chunk.js.LICENSE.txt": "/Habit-Timer/static/js/2.8cb87dea.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/Habit-Timer/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.04cd5a3c.js",
     "static/js/2.8cb87dea.chunk.js",
-    "static/css/main.21b297a0.chunk.css",
-    "static/js/main.626dea11.chunk.js"
+    "static/css/main.93b956e3.chunk.css",
+    "static/js/main.516dffe1.chunk.js"
   ]
 }
