@@ -1,8 +1,7 @@
 import React, { Component } from "react";
+import moment from "moment";
 
 //adapted/updated from SitePoint on Youtube
-
-//I need something that takes the className puts it in the App.js state, which updates the Calendar state as well.
 
 class Timer extends Component {
   constructor(props) {
@@ -83,25 +82,32 @@ class Timer extends Component {
     return this.state.dateContext.format("D");
   };
 
+  daysInMonth = () => {
+    let dateContext = moment();
+    return dateContext.daysInMonth();
+  };
+
   handleSave() {
+    let totalDays = this.daysInMonth();
+    console.log(totalDays);
     let currentDayElem = document.querySelector(".day.current-day");
     let index = currentDayElem.firstChild.innerHTML;
-    console.log("index", index);
-    // currentDayElem.removeChild(currentDayElem.firstChild);
     this.handleReset();
+    //Variable to set expiration of cookie upon end of month
+    let cookieExp = totalDays - index;
 
     if (this.state.seconds <= 360) {
       currentDayElem.className = "excellent";
-      this.props.setClass("excellent", index);
+      this.props.setClass("excellent", index, cookieExp);
     } else if (this.state.seconds <= 480) {
       currentDayElem.className = "great";
-      this.props.setClass("great", index);
+      this.props.setClass("great", index, cookieExp);
     } else if (this.state.seconds <= 600) {
       currentDayElem.className = "good";
-      this.props.setClass("good", index);
+      this.props.setClass("good", index, cookieExp);
     } else {
       currentDayElem.className = "needs-work";
-      this.props.setClass("needs-work", index);
+      this.props.setClass("needs-work", index, cookieExp);
     }
   }
 

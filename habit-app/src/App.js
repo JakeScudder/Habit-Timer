@@ -52,12 +52,12 @@ class App extends Component {
     console.log(Cookies.getJSON("index22"));
   }
 
-  handleState = (className, index) => {
+  handleState = (className, index, exp) => {
     console.log(index);
     this.setState({
       [index]: className,
     });
-    Cookies.set(`index${index}`, JSON.stringify(className));
+    Cookies.set(`index${index}`, JSON.stringify(className), { expires: exp });
   };
 
   render() {
